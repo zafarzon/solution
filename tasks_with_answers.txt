@@ -1,0 +1,68 @@
+task_1: Напишите программу на C#, которая преобразует получаемые данные о расстоянии в километрах в метры и выводит результат
+
+
+code_1:
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine(a*100);
+
+
+
+
+
+
+task_2: Напишите программу для сложения всех чётных чисел в массиве
+
+
+code_2: 
+static int Solutions(int[] a)
+{
+    int result = 0;
+    foreach (int i in a) if (i % 2 == 0) result += i;
+    return result;
+}
+
+
+
+
+
+
+
+task_3: Даны следующие классы:
+
+public class A
+{
+    public virtual void Print1()
+    {
+        Console.Write("A");
+    }
+    public void Print2()
+    {
+        Console.Write("A");
+    }
+}
+public class B: A
+{
+    public override void Print1()
+    {
+        Console.Write("B");
+    }
+}
+public class C : B
+{
+    new public void Print2()
+    {
+        Console.Write("C");
+    }
+}
+К какому результату приведет выполнение следующего кода:
+
+var c = new C();
+A a = c;
+ 
+a.Print2();
+a.Print1();
+c.Print2();
+
+
+result_3: 
+ABC
